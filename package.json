@@ -1,0 +1,23 @@
+{
+  "name": "sbpickup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesrymer/SBPickup.git"
+  },
+  "author": "Amanda Tomasetti, James Rymer, Roberto Aguilar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesrymer/SBPickup/issues"
+  },
+  "homepage": "https://github.com/jamesrymer/SBPickup#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}
