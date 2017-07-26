@@ -2,12 +2,6 @@ var express = require("express");
 var router  = express.Router();
 var Park = require("../models/park");
 
-var parks = [
-    {name: "twin creeks" },    
-    {name: "random1" },   
-    {name: "random 2" },   
-    {name: "random3" }    
-];
 
 // ================================
 // PARKS ROUTES
