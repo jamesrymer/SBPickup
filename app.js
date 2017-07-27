@@ -6,9 +6,12 @@ var mongoose            = require("mongoose");
 mongoose.connect("mongodb://localhost/sbpickup");
 app.use(bodyParser.urlencoded({extended: true}));
 
+var gameRoutes = require("./routes/games");
 var parkRoutes = require("./routes/parks");
 
+app.use(gameRoutes);
 app.use(parkRoutes);
+
 
 
 app.listen(process.env.PORT, process.env.IP, function(){

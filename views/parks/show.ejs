@@ -1,0 +1,16 @@
+
+<h1><%=park.name%></h1>
+
+
+
+
+
+<p>
+    <a class="btn btn-success" href="/parks/<%= park._id %>/games/new">Add New Game</a>
+</p>
+
+<% park.games.forEach(function(game){ %>
+    <p>
+        <strong>Game name: <%= game.name %></strong>
+    </p>
+<% }) %>
