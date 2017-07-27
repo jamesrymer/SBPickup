@@ -1,0 +1,8 @@
+<h1>Parks</h1>
+
+<a class="btn btn-success" href="/parks/new">Add New park</a>
+
+<% parks.forEach(function(park){ %>
+    <p><%=park.name%></p>
+    <a href="/parks/<%= park._id %>" class="btn btn-primary">More Info</a>
+<% }); %>

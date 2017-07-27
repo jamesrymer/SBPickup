@@ -7,6 +7,10 @@ var Park = require("../models/park");
 // PARKS ROUTES
 // ================================
 
+router.get("/", function(req, res){
+    res.redirect("/parks");
+});
+
 // INDEX Displays All Parks
 router.get("/parks", function(req, res){
     Park.find({}, function(err, allParks){
@@ -38,6 +42,20 @@ router.post("/parks", function(req, res){
       }
   });
   
+});
+//SHOW
+router.get("/parks/:id", function(req, res){
+    //find the park with provided ID
+    console.log("show page");
+    Park.findById(req.params.id).populate("games").exec(function(err, foundPark){
+        if(err){
+            console.log(err);
+        } else {
+            console.log(foundPark)
+            //render show template with that park
+            res.render("show.ejs", {park: foundPark});
+        }
+    });
 });
 
 module.exports = router;
