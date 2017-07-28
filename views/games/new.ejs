@@ -1,8 +1,22 @@
-<h1>you made it to game new</h1>
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Add New Game to <%= park.name %></h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/parks/<%= park._id %>/games" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="game[text]" placeholder="text">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="game[author]" placeholder="author">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/parks">Go Back</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
 
-<h1>Create new Game</h1>
-
-<form action = "/parks/<%= park._id %>/games" method = "POST">
-    <input type = "text" name = "game[name]" placeholder = "name">
-    <button>Submit!</button>
-</form>

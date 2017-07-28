@@ -1,10 +1,8 @@
 var mongoose = require("mongoose");
 
-// Creates the park schema
-var gameSchema = new mongoose.Schema({
-    name: String,
-    
+var gameSchema = mongoose.Schema({
+    text: String,
+    author: String
 });
-
 
 module.exports = mongoose.model("Game", gameSchema);
